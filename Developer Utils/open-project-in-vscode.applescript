@@ -2,7 +2,7 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title code
+# @raycast.title Code
 # @raycast.mode silent
 # @raycast.packageName VS Code
 #
