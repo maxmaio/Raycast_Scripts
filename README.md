@@ -1,3 +1,3 @@
 # Personal Raycast Scripts
 
-check them out
+Link to [Raycast](https://github.com/raycast)
