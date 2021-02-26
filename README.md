@@ -1,1 +1,3 @@
-# hello world
+# Personal Raycast Scripts
+
+check them out
