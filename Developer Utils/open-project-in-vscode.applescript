@@ -2,9 +2,9 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title Code
+# @raycast.title Code exact
 # @raycast.mode silent
-# @raycast.packageName VS Code
+# @raycast.packageName VS Code project
 #
 # Optional parameters:
 # @raycast.icon images/vscode.png
