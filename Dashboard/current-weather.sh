@@ -23,11 +23,12 @@ function getWindColor(windSpeed) {
   if (windSpeed > 5) {
     windColor = 33;
   }
-  if (windSpeed >12) {
+  if (windSpeed > 12) {
     windColor = 31;
   }
   return windColor;
 }
+
 function getWindDirection(degrees) {
   let arrow = "↑";
   if (20 <= degrees && degrees < 70){
@@ -69,7 +70,7 @@ function getTempColor(temp) {
 }
 
 
-function printWeatherIcon(data) {
+function printWeatherInfo(data) {
   temp = data.temp_F;
   weatherCode = data.weatherCode;
   weatherDesc = data.weatherDesc[0].value;
@@ -77,6 +78,7 @@ function printWeatherIcon(data) {
   arrow = getWindDirection(Number(data.winddirDegree));
   tempColor = getTempColor(temp);
   windColor = getWindColor(windSpeed);
+
   switch (weatherCode) {
     case "113":
       console.log(
@@ -499,12 +501,13 @@ function printWeatherIcon(data) {
 }
 
 
-function helloWorld(data) {
+function main(data) {
   data = JSON.parse(data);
-  printWeatherIcon(data.current_condition[0]);
+  printWeatherInfo(data.current_condition[0]);
 }
 
 function getWeatherData(location) {
+  // replace whitespace with '+'
   location = location.replace(/\s/g, '+');
   const http = require('http');
   let data = "";
@@ -522,7 +525,7 @@ function getWeatherData(location) {
       }
     })
     res.on('end',() => {
-        helloWorld(data);
+       main(data);
     })
   })
 
@@ -549,7 +552,7 @@ const locReq = http.request(locOptions, res => {
   })
   res.on('end',() => {
     data = JSON.parse(data);
-    console.log("Weather report: " + data.city + ", " + data.region + ", " + data.country);
+    console.log("Weather report: " + data.city + ", " + data.region + ", " + data.country + "\n");
     getWeatherData(data.city);
   })
 })
@@ -558,4 +561,3 @@ locReq.on('error', error => {
 })
 
 locReq.end()
-
