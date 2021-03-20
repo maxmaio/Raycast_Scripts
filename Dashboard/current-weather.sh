@@ -8,7 +8,7 @@
 // @raycast.schemaVersion 1
 // @raycast.title Current Weather
 // @raycast.mode fullOutput
-// @raycast.packageName Raycast Scripts
+// @raycast.packageName Current Weather
 //
 // Optional parameters:
 // @raycast.icon 🌦
@@ -70,7 +70,6 @@ function getTempColor(temp) {
 
 
 function printWeatherIcon(data) {
-  console.log(data);
   temp = data.temp_F;
   weatherCode = data.weatherCode;
   weatherDesc = data.weatherDesc[0].value;
@@ -118,7 +117,7 @@ function printWeatherIcon(data) {
     case "176":
       console.log(
         "\033[33m   \\  /\033[0m        " + weatherDesc + " \n",
-        "\033[33m _ /\\\033[0m\033[0m.-. \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
+        "\033[33m _ /\\\033[0m\033[0m.-. \033[0m    " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
         "\033[33m   /\033[0m(___(__) \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[34m    ‘ ‘ ‘ ‘ \033[0m\n",
         "\033[34m   ‘ ‘ ‘ ‘  \033[0m\n"
@@ -128,7 +127,7 @@ function printWeatherIcon(data) {
     case "353":
       console.log(
         "\033[33m   \\  /\033[0m        " + weatherDesc + " \n",
-        "\033[33m _ /\\\033[0m\033[0m.-. \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
+        "\033[33m _ /\\\033[0m\033[0m.-. \033[0m    " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
         "\033[33m   /\033[0m(___(__) \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[34m    ‘ ‘ ‘ ‘ \033[0m\n",
         "\033[34m   ‘ ‘ ‘ ‘  \033[0m\n"
@@ -137,7 +136,7 @@ function printWeatherIcon(data) {
     case "263":
       console.log(
         "\033[33m   \\  /\033[0m        " + weatherDesc + " \n",
-        "\033[33m _ /\\\033[0m\033[0m.-. \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
+        "\033[33m _ /\\\033[0m\033[0m.-. \033[0m    " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
         "\033[33m   /\033[0m(___(__) \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[34m    ‘ ‘ ‘ ‘ \033[0m\n",
         "\033[34m   ‘ ‘ ‘ ‘  \033[0m\n"
@@ -147,7 +146,7 @@ function printWeatherIcon(data) {
     case "299":
       console.log(
         "\033[33m   \\  /\033[0m        " + weatherDesc + " \n",
-        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
+        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m    " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
         "\033[33m  ,\\_\033[0m(   ).  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[33m   /\033[0m(___(__) \033[0m\n",
         "\033[34m   ‚‘‚‘‚‘‚‘  \033[0m\n",
@@ -158,7 +157,7 @@ function printWeatherIcon(data) {
     case "305":
       console.log(
         "\033[33m   \\  /\033[0m        " + weatherDesc + " \n",
-        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
+        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m    " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
         "\033[33m  ,\\_\033[0m(   ).  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[33m   /\033[0m(___(__) \033[0m\n",
         "\033[34m   ‚‘‚‘‚‘‚‘  \033[0m\n",
@@ -169,7 +168,7 @@ function printWeatherIcon(data) {
     case "356":
       console.log(
         "\033[33m   \\  /\033[0m        " + weatherDesc + " \n",
-        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
+        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m    " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
         "\033[33m  ,\\_\033[0m(   ).  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[33m   /\033[0m(___(__) \033[0m\n",
         "\033[34m   ‚‘‚‘‚‘‚‘  \033[0m\n",
@@ -180,7 +179,7 @@ function printWeatherIcon(data) {
     case "323":
       console.log(
         "\033[33m   \\  /\033[0m        " + weatherDesc + " \n",
-        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
+        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m    " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
         "\033[33m  ,\\_\033[0m(   ).  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[33m   /\033[0m(___(__) \033[0m\n",
         "\033[36m     *  *  * \033[0m\n",
@@ -191,18 +190,7 @@ function printWeatherIcon(data) {
     case "326":
       console.log(
         "\033[33m   \\  /\033[0m        " + weatherDesc + " \n",
-        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
-        "\033[33m  ,\\_\033[0m(   ).  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
-        "\033[33m   /\033[0m(___(__) \033[0m\n",
-        "\033[36m     *  *  * \033[0m\n",
-        "\033[36m    *  *  *  \033[0m\n"
-      );
-      break;
-
-    case "HeavySnowShowers":
-      console.log(
-        "\033[33m   \\  /\033[0m        " + weatherDesc + " \n",
-        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
+        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m    " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
         "\033[33m  ,\\_\033[0m(   ).  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[33m   /\033[0m(___(__) \033[0m\n",
         "\033[36m     *  *  * \033[0m\n",
@@ -213,7 +201,7 @@ function printWeatherIcon(data) {
     case "335":
       console.log(
         "\033[33m   \\  /\033[0m        " + weatherDesc + " \n",
-        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
+        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m    " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
         "\033[33m  ,\\_\033[0m(   ).  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[33m   /\033[0m(___(__) \033[0m\n",
         "\033[36m     *  *  * \033[0m\n",
@@ -224,7 +212,7 @@ function printWeatherIcon(data) {
     case "371":
       console.log(
         "\033[33m   \\  /\033[0m        " + weatherDesc + " \n",
-        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
+        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m    " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
         "\033[33m  ,\\_\033[0m(   ).  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[33m   /\033[0m(___(__) \033[0m\n",
         "\033[36m     *  *  * \033[0m\n",
@@ -235,7 +223,7 @@ function printWeatherIcon(data) {
     case "395":
       console.log(
         "\033[33m   \\  /\033[0m        " + weatherDesc + " \n",
-        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
+        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m    " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
         "\033[33m  ,\\_\033[0m(   ).  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[33m   /\033[0m(___(__) \033[0m\n",
         "\033[36m     *  *  * \033[0m\n",
@@ -243,20 +231,10 @@ function printWeatherIcon(data) {
       );
       break;
 
-    case "ThunderyShowers":
-      console.log(
-        "\033[33m   \\  /\033[0m        " + weatherDesc + " \n",
-        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
-        "\033[33m   /\033[0m(___(__) \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
-        "\033[33m  ⚡\033[34m‘ ‘\033[33m,⚡\033[34m‘  \033[0m\n",
-        "\033[34m   ‘ ‘ ‘ ‘  \033[0m\n"
-      );
-      break;
-
     case "386":
       console.log(
         "\033[33m   \\  /\033[0m        " + weatherDesc + " \n",
-        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
+        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m    " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
         "\033[33m   /\033[0m(___(__) \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[33m  ⚡\033[34m‘ ‘\033[33m,⚡\033[34m‘  \033[0m\n",
         "\033[34m   ‘ ‘ ‘ ‘  \033[0m\n"
@@ -266,26 +244,16 @@ function printWeatherIcon(data) {
     case "200":
       console.log(
         "\033[33m   \\  /\033[0m        " + weatherDesc + " \n",
-        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
+        "\033[33m  _/\\\033[0m\033[0m .-. \033[0m    " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
         "\033[33m   /\033[0m(___(__) \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[33m  ⚡\033[34m‘ ‘\033[33m,⚡\033[34m‘  \033[0m\n",
         "\033[34m   ‘ ‘ ‘ ‘  \033[0m\n"
       );
       break;
 
-    case "ThunderyHeavyRain":
-      console.log(
-        "\033[0m      .-.     \033[0m   " + weatherDesc + " \n",
-        "\033[0m    (   ).   \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
-        "\033[0m   (___(__)  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
-        "\033[34m  ‚‘\033[33m⚡\033[34m‘‚\033[33m⚡\033[34m‚‘ \033[0m\n",
-        "\033[34m  ‚’‚’\033[33m⚡\033[34m’‚’  \033[0m\n"
-      );
-      break;
-
     case "389":
       console.log(
-        "\033[0m      .-.     \033[0m   " + weatherDesc + " \n",
+        "\033[0m      .-.     \033[0m " + weatherDesc + " \n",
         "\033[0m    (   ).   \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
         "\033[0m   (___(__)  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[34m  ‚‘\033[33m⚡\033[34m‘‚\033[33m⚡\033[34m‚‘ \033[0m\n",
@@ -332,20 +300,10 @@ function printWeatherIcon(data) {
         "\033[34m  ‘ ‘ ‘ ‘   \033[0m\n"
       );
       break;
-    
-    case "HeavyRain":
-      console.log(
-        "\033[0m      .-.     \033[0m   " + weatherDesc + " \n",
-        "\033[0m    (   ).   \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
-        "\033[0m   (___(__)  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
-        "\033[34m   ‚‘‚‘‚‘‚‘  \033[0m\n",
-        "\033[34m   ‚’‚’‚’‚’  \033[0m\n"
-      );
-      break;
 
     case "359":
       console.log(
-        "\033[0m      .-.     \033[0m   " + weatherDesc + " \n",
+        "\033[0m      .-.     \033[0m " + weatherDesc + " \n",
         "\033[0m    (   ).   \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
         "\033[0m   (___(__)  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[34m   ‚‘‚‘‚‘‚‘  \033[0m\n",
@@ -373,16 +331,6 @@ function printWeatherIcon(data) {
       );
       break;
 
-    case "LightSnow":
-      console.log(
-        "\033[0m      .-.     \033[0m   " + weatherDesc + " \n",
-        "\033[0m    (   ).   \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
-        "\033[0m   (___(__)  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
-        "\033[36m   *  *  * \033[0m\n",
-        "\033[36m  *  *  *  \033[0m\n"
-      );
-      break;
-
     case "320":
       console.log(
         "\033[0m      .-.     \033[0m   " + weatherDesc + " \n",
@@ -400,16 +348,6 @@ function printWeatherIcon(data) {
         "\033[0m   (___(__)  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[36m   *  *  * \033[0m\n",
         "\033[36m  *  *  *  \033[0m\n"
-      );
-      break;
-
-    case "HeavySnow":
-      console.log(
-        "\033[0m      .-.     \033[0m   " + weatherDesc + " \n",
-        "\033[0m    (   ).   \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
-        "\033[0m   (___(__)  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
-        "\033[36m   * * * * \033[0m\n",
-        "\033[36m  * * * *  \033[0m\n"
       );
       break;
 
@@ -449,16 +387,6 @@ function printWeatherIcon(data) {
         "\033[0m   (___(__)  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
         "\033[36m   * * * * \033[0m\n",
         "\033[36m  * * * *  \033[0m\n"
-      );
-      break;
-
-    case "LightSleet":
-      console.log(
-        "\033[0m      .-.     \033[0m   " + weatherDesc + " \n",
-        "\033[0m    (   ).   \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
-        "\033[0m   (___(__)  \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
-        "\033[34m   ‘ \033[0m*\033[34m ‘ \033[0m*  \033[0m\n",
-        "\033[0m  *\033[34m ‘ \033[0m*\033[34m ‘   \033[0m\n",
       );
       break;
 
@@ -573,41 +501,61 @@ function printWeatherIcon(data) {
 
 function helloWorld(data) {
   data = JSON.parse(data);
-  currentCondition = data.current_condition[0];
-  weatherDesc = currentCondition.weatherDesc[0].value;
-  weatherCode = currentCondition.weatherCode;
-  console.log("Weather report: San Francisco, California, USA\n");
-  printWeatherIcon(currentCondition);
+  printWeatherIcon(data.current_condition[0]);
 }
 
-
-
-const http = require('http');
-const options = {
+function getWeatherData(location) {
+  location = location.replace(/\s/g, '+');
+  const http = require('http');
+  let data = "";
+  const weatherOptions = {
   hostname: 'wttr.in',
   port: 80,
-  path: '/Dolores+Heights?format=j1',
+  path: '/' + location + '?format=j1',
+  method: 'GET'
+  }
+  const req = http.request(weatherOptions, res => {
+
+    res.on('data', d => {
+      if (d){
+      data += d;
+      }
+    })
+    res.on('end',() => {
+        helloWorld(data);
+    })
+  })
+
+  req.on('error', error => {
+    console.error(error)
+  })
+
+  req.end()
+}
+
+const http = require('http');
+data = "";
+const locOptions = {
+  hostname: "ipinfo.io",
+  port: 80,
+  path: '/',
   method: 'GET'
 }
-let data = "";
-const req = http.request(options, res => {
-
-  res.on('data', d => {
+const locReq = http.request(locOptions, res => {
+    res.on('data', d => {
     if (d){
     data += d;
     }
   })
   res.on('end',() => {
-      helloWorld(data);
+    data = JSON.parse(data);
+    console.log("Weather report: " + data.city + ", " + data.region + ", " + data.country);
+    getWeatherData(data.city);
   })
-  
-
 })
-
-req.on('error', error => {
+locReq.on('error', error => {
   console.error(error)
 })
 
-req.end()
-
+locReq.end()
 
