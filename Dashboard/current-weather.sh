@@ -82,11 +82,11 @@ function printWeatherInfo(data) {
   switch (weatherCode) {
     case "113":
       console.log(
-        "\033[33m     \\   /    \033[39m   " + weatherDesc + " \n",
-        "\033[33m     .-.       \033[39m " + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
-        "\033[33m  ― (   ) ―  \033[39m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph\n",
-        "\033[33m     '-’     \033[39m\n",
-        "\033[33m    /   \\    \033[39m\n"
+        "\033[33m     \\   /    \033[0m " + weatherDesc + " \n",
+        "\033[33m     .-.      \033[0m" + "\033[" + tempColor +"m" + temp + "\033[0m °F\n",
+        "\033[33m  ― (   ) ―  \033[0m " + arrow + "\033["+ windColor + "m " + windSpeed + "\033[0m" + " mph\n",
+        "\033[33m     '-’     \033[0m\n",
+        "\033[33m    /   \\    \033[0m\n"
       );
       break;
       
@@ -509,15 +509,15 @@ function main(data) {
 function getWeatherData(location) {
   // replace whitespace with '+'
   location = location.replace(/\s/g, '+');
-  const http = require('http');
+  const https = require('https');
   let data = "";
   const weatherOptions = {
   hostname: 'wttr.in',
-  port: 80,
+  port: 443,
   path: '/' + location + '?format=j1',
   method: 'GET'
   }
-  const req = http.request(weatherOptions, res => {
+  const req = https.request(weatherOptions, res => {
 
     res.on('data', d => {
       if (d){
@@ -536,15 +536,15 @@ function getWeatherData(location) {
   req.end()
 }
 
-const http = require('http');
+const https = require('https');
 data = "";
 const locOptions = {
   hostname: "ipinfo.io",
-  port: 80,
+  port: 443,
   path: '/',
   method: 'GET'
 }
-const locReq = http.request(locOptions, res => {
+const locReq = https.request(locOptions, res => {
     res.on('data', d => {
     if (d){
     data += d;
