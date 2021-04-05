@@ -13,6 +13,9 @@
 # @raycast.packageName Internet
 # @raycast.refreshTime 20m
 # @raycast.schemaVersion 1
+export NVM_DIR=~/.nvm
+export NODE_EXTRA_CA_CERTS=/etc/ssl/certs/pypl2.pem
+source $(brew --prefix nvm)/nvm.sh
 
 json=$(speed-test -j)
 
