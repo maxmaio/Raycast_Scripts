@@ -26,5 +26,5 @@ bps_up=$(echo "$json" | jq -r '.upload')
 
 mbps_down=$(echo "scale=2; $bps_down" | bc)
 mbps_up=$(echo "scale=2;   $bps_up" | bc)
-
-echo "↓ ${mbps_down}mbps  ↑ ${mbps_up}mbps  ↔ ${ping}ms"
+time=$(date +'%r')
+echo "↓ ${mbps_down}mbps  ↑ ${mbps_up}mbps  ↔ ${ping}ms ⌚ $time "

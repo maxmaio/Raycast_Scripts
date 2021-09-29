@@ -456,7 +456,7 @@ function printWeatherInfo(data) {
       break;
     case "143":
       return [
-        "\033[36m _ - _ - _ - \033[0m  "  + weatherDesc + " ",
+        "\033[36m _ - _ - _ - \033[0m "  + weatherDesc + " ",
         "\033[36m  _ - _ - _  \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F",
         "\033[36m _ - _ - _ - \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph",
         "             "
@@ -465,7 +465,7 @@ function printWeatherInfo(data) {
 
     case "248":
       return [
-        "\033[36m _ - _ - _ - \033[0m  "  + weatherDesc + " ",
+        "\033[36m _ - _ - _ - \033[0m "  + weatherDesc + " ",
         "\033[36m  _ - _ - _  \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F",
         "\033[36m _ - _ - _ - \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph",
         "             "
@@ -474,7 +474,7 @@ function printWeatherInfo(data) {
 
     case "260":
       return [
-        "\033[36m _ - _ - _ - \033[0m  "  + weatherDesc + " ",
+        "\033[36m _ - _ - _ - \033[0m "  + weatherDesc + " ",
         "\033[36m  _ - _ - _  \033[0m " + "\033[" + tempColor +"m" + temp + "\033[0m °F",
         "\033[36m _ - _ - _ - \033[0m " + arrow + " " + "\033["+ windColor + "m" + windSpeed + "\033[0m" + " mph",
         "             "
@@ -490,13 +490,13 @@ function main(data) {
   const currHour = d.getHours();
   let diagram = [];
   diagram.push(printWeatherInfo(data.current_condition[0]));
-  let headerOutput = "      Current Conditions"; 
+  let headers = ["Current Conditions"];
   if (currHour < 12) {
-    headerOutput += new Array(8).join(' ') + "             Noon";
+    headers.push("Noon");
     diagram.push(printWeatherInfo(data.weather[0].hourly[4]));
   }
   if (currHour < 24) {
-    headerOutput += new Array(diagram.length * 27 - headerOutput.length ).join(' ') + "               Evening";
+    headers.push("Evening");
     diagram.push(printWeatherInfo(data.weather[0].hourly[7]));
   }
   
@@ -513,8 +513,11 @@ function main(data) {
       }
     }
   }
-  
-
+  let headerOutput = "";
+  for(i=0; i<headers.length; i++){
+    padding = Math.floor((cellLength - headers[i].length)/2)+1;
+    headerOutput += new Array(padding+1).join(' ') + headers[i] + new Array(padding).join(' ');
+  }
   console.log(headerOutput);
   console.log( "┌" + new Array(diagram.length * cellLength+diagram.length).join('─') + "┐" );
   for (i = 0; i < size; i++) {
